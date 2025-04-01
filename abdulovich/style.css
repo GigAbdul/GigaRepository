@@ -431,13 +431,13 @@ body {
     }
 }
 
-.hamburger {
+.burger-menu {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
 }
-.hamburger span {
+.burger-menu span {
     width: 25px;
     height: 3px;
     background: #333;
@@ -462,7 +462,7 @@ body {
 }
 
 @media (max-width: 992px) {
-    .hamburger {
+    .burger-menu {
         display: flex;
         position: absolute;
         top: 30px;
@@ -483,7 +483,9 @@ body {
         transition: all 0.3s ease;     }
 
     .nav-links.active {
-        display: block;     }
+        display: flex;    
+        animation: slideRight 0.3s;
+    }
 
     .hero-container {
         flex-direction: column;
@@ -529,7 +531,7 @@ body {
 }
 
 @media (max-width: 820px) {
-    .hamburger {
+    .burger-menu {
         right: 10px;         
         top: 30px;
     }
@@ -539,13 +541,13 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hamburger {
+    .burger-menu {
         right: 20px;     }
         .nav-links,
     .nav-button {
         display: none;
     }
-        .hamburger {
+        .burger-menu {
         display: flex;
     }
 }
@@ -559,5 +561,20 @@ body {
 .feature-card{
     width: 100%;
 }
-
 }
+
+/* Анимации */
+
+@keyframes slideRight {
+    0% {
+      max-width: 0;
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      max-width: 500px; /* подберите значение под ваш контент */
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
