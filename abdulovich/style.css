@@ -496,7 +496,7 @@ body {
 
     .nav-links.active {
         display: flex;    
-        animation: slideRight 0.3s;
+        animation: slideRight 0.4s;
     }
 
     .hero-container {
@@ -592,3 +592,19 @@ body {
     }
   }
   
+  @keyframes slideLeft {
+    0% {
+      max-width: 500px; /* начальное состояние – открытое */
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      max-width: 0;
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+  
+.nav-links.closing{
+    animation: slideLeft 0.4s forwards;
+}
