@@ -5,6 +5,9 @@
 
 }
 
+.burger-menu img{
+display: none;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -431,17 +434,15 @@ body {
     }
 }
 
+/* CSS */
 .burger-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     gap: 5px;
-}
-.burger-menu span {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    transition: all 0.3s;
+    transition: transform 0.5s;
 }
 
 .mobile-nav {
@@ -471,6 +472,17 @@ body {
         cursor: pointer;
         z-index: 101;
     }
+    .burger-menu img{
+        display: flex;
+        width: 35px;
+        height: auto;
+        margin-top: -4px;
+    }
+    .hero{
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
 
     .nav-links {
         display: none;         
@@ -496,9 +508,7 @@ body {
     .hero-image {
         width: 100%;
     }
-    .hero-image{
-        display: none;
-    }
+
     
     .hero-title {
         font-size: 44px;
@@ -516,6 +526,9 @@ body {
     }
     .secondary-button{
         margin-bottom: 1rem;
+    }
+    .feature-card {
+        width: 100%;
     }
 }
 @media (max-width: 853px) {
@@ -539,6 +552,7 @@ body {
         width: 100%;
     }
 }
+
 
 @media (max-width: 768px) {
     .burger-menu {
@@ -572,7 +586,7 @@ body {
       transform: translateX(-20px);
     }
     100% {
-      max-width: 500px; /* подберите значение под ваш контент */
+      max-width: 1000px; /* подберите значение под ваш контент */
       opacity: 1;
       transform: translateX(0);
     }
